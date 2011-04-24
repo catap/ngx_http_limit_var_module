@@ -59,6 +59,8 @@ $t->run();
 
 like(http_get('/'), qr!^HTTP/1.1 404 Not Found!m, 'limit skip');
 like(http_get('/'), qr!^HTTP/1.1 404 Not Found!m, 'limit skip');
+http_get('/');
+http_get('/');
 like(http_get('/'), qr!^HTTP/1.1 402 Payment Required!m, 'limit');
 like(http_get('/'), qr!^HTTP/1.1 402 Payment Required!m, 'limit');
 
